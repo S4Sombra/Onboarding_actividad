@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lila"
+    >
+
+    <!--Título Onboarding-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/onboarding_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Tu App de Viajes"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--Parrafo descripción-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/onboarding_descripción"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola, estamos buscando a millones de usuarios con inquietudes y ganas de viajar. Si eres tu... No lo dudes y accede a nuestra app. Descubrirás miles de destinos y facilidades para alquilar coches, ver el tiempo..."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="32dp"
+        app:layout_constraintTop_toBottomOf="@id/onboarding_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/onboarding_image"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/onboarding_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/lilabackground"
+        android:src="@drawable/onboarding_image"
+        app:layout_constraintBottom_toTopOf="@+id/linearbottom_onboarding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onboarding_descripción" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearbottom_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/background_dark"
+        android:padding="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/onboarding_button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:text="NEXT"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
